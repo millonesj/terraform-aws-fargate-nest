@@ -6,3 +6,7 @@ terraform.tfstate
 terraform.tfstate.backup
 .terraform.tfstate.lock.info
 .terraform.lock.hcl
+
+# compiled output
+nest-test/dist
+nest-test/node_modules

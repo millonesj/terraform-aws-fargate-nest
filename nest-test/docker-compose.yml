@@ -1,0 +1,17 @@
+version: "3.5"
+services:
+  api:
+    container_name: api_test
+    build:
+      context: .
+    volumes:
+      - ./:/api:rw
+    environment:
+      - NODE_ENV=${NODE_ENV}
+    ports:
+      - ${APP_PORT}:3000
+    networks:
+      - dockernet_terraform
+networks:
+  dockernet_terraform:
+    external: true
